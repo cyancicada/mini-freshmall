@@ -55,6 +55,7 @@ Page({
         _this.data.error = result.data.error_msg;
         App.showError(_this.data.error);
       }
+      _this.data.hasError = false;
       _this.setData(result.data);
     };
 
