@@ -41,6 +41,12 @@
         "selectedIconPath": "images/tabBar/cate_on.png"
       },
       {
+        "pagePath": "pages/shop/index",
+        "text": "积分商城",
+        "iconPath": "images/tabBar/cart.png",
+        "selectedIconPath": "images/tabBar/cart_on.png"
+      },
+      {
         "pagePath": "pages/flow/index",
         "text": "购物车",
         "iconPath": "images/tabBar/cart.png",
