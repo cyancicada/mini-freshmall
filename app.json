@@ -14,6 +14,7 @@
     "pages/address/index",
     "pages/address/create",
     "pages/address/detail",
+    "pages/shop/index",
     "pages/login/login"
   ],
   "window": {

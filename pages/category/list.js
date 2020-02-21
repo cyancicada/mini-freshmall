@@ -69,6 +69,7 @@ Page({
     let _this = this;
     wx.getSystemInfo({
       success: function (res) {
+        console.log(res);
         _this.setData({
           scrollHeight: res.windowHeight - 90,
         });

@@ -32,7 +32,6 @@
 
     </view>
     <scroll-view bindscrolltolower="bindDownLoad" class="weui-panel weui-panel_access" scroll-y="true" style="height: {{scrollHeight}}px; width: 750rpx;" wx:if="{{list.data.length > 0}}">
-
       <view class="new">
         <view class="category-list {{arrange}}">
           <navigator class="list b-f" hover-class="none" url="../goods/index?goods_id={{item.goods_id}}" wx:for="{{list.data}}" wx:key="list">
