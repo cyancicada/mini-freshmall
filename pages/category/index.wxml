@@ -59,7 +59,7 @@
             </navigator>
           </view>
         </view>
-        <view hidden="{{!no_more}}" class="no-more f-30">亲, 没有更多了</view>
+        <!-- <view hidden="{{!no_more}}" class="no-more f-30">亲, 没有更多了</view> -->
       </scroll-view>
     </view>
     <view wx:if="{{!noList && !list.data.length}}" class="yoshop-notcont" style="margin-top:130px;">

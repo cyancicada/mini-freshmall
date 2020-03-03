@@ -88,11 +88,12 @@ Page({
     _this.setData({
       curNav,
       curIndex,
-      scrollTop: 0
-    },function (is_super, page) {
+      scrollTop: 0,
+      page: 1
+    },function (page) {
       // 获取商品列表
       App._get('goods/lists', {
-        page: page || 1,
+        page: _this.data.page || 1,
         sortType: _this.data.sortType,
         sortPrice: _this.data.sortPrice ? 1: 0,
         category_id: curNav || 0,
@@ -100,15 +101,12 @@ Page({
       }, function (result) {
           let resultList = result.data.list
             , dataList = _this.data.list;
-          if (is_super === true || typeof dataList.data === 'undefined') {
+          if (typeof dataList.data === 'undefined') {
             // typeof dataList.data === 'undefined'
             _this.setData({ list: resultList, noList: false });
-            console.log(_this.data.noList,11111);
           } else {
+            // _this.setData({ 'list.data': dataList.data.concat(resultList.data) });
             _this.setData({ 'list.data': resultList.data });
-            console.log(_this.data.noList,22222);
-            console.log(resultList.data,11212121);
-            console.log(dataList.data,33333);
           }
       });
     });
@@ -164,5 +162,18 @@ Page({
       _this.getGoodsList(true);
     });
   },
-
+  /**
+   * 下拉到底加载数据
+   */
+  bindDownLoad: function () {
+    // 已经是最后一页
+    if (this.data.page >= this.data.list.last_page) {
+      this.setData({ no_more: true });
+      return false;
+    }
+    console.log(this.data.page,33333333);
+    this.getGoodsList(false, ++this.data.page);
+    console.log(this.data.page,11111111);
+    console.log(this.data.list.last_page,22222222);
+  },
 });
