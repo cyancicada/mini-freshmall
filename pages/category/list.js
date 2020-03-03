@@ -2,11 +2,25 @@ let App = getApp();
 
 Page({
   data: {
+    // 搜索框样式
     searchColor: "rgba(0,0,0,0.4)",
     searchSize: "15",
     searchName: "搜索商品",
 
-    scrollHeight: null,
+    // 列表高度
+    scrollHeight: 0,
+
+    // 一级分类：指针
+    curNav: true,
+    curIndex: 0,
+
+    // 分类列表
+    lists: [],
+
+    // show
+    notcont: false,
+
+
     showView: false,
     arrange: "",
 
@@ -31,6 +45,8 @@ Page({
     // 设置商品列表高度
     _this.setListHeight();
 
+    // 获取分类列表
+    _this.getCategoryList();
     // 记录option
     _this.setData({ option}, function () {
       // 获取商品列表
@@ -48,7 +64,7 @@ Page({
       page: page || 1,
       sortType: _this.data.sortType,
       sortPrice: _this.data.sortPrice ? 1: 0,
-      category_id: _this.data.option.category_id || 0,
+      category_id: _this.data.option.category_id || 2,
       search: _this.data.option.search || '',
     }, function (result) {
         let resultList = result.data.list
@@ -66,12 +82,20 @@ Page({
    * 设置商品列表高度
    */
   setListHeight: function () {
+    // let _this = this;
+    // wx.getSystemInfo({
+    //   success: function (res) {
+    //     console.log(res);
+    //     _this.setData({
+    //       scrollHeight: res.windowHeight - 90,
+    //     });
+    //   }
+    // });
     let _this = this;
     wx.getSystemInfo({
-      success: function (res) {
-        console.log(res);
+      success: function(res) {
         _this.setData({
-          scrollHeight: res.windowHeight - 90,
+          scrollHeight: res.windowHeight - 47,
         });
       }
     });
@@ -138,5 +162,19 @@ Page({
       path: "/pages/category/index"
     };
   },
+  /**
+   * 获取分类列表
+   */
+  getCategoryList: function() {
+    let _this = this;
+    App._get('category/lists', {}, function(result) {
+      let data = result.data;
+      _this.setData({
+        lists: data.list,
+        curNav: data.list.length > 0 ? data.list[0].category_id : tru2,
+        notcont: !data.list.length
+      });
+    });
+  }
 
 });

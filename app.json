@@ -14,7 +14,6 @@
     "pages/address/index",
     "pages/address/create",
     "pages/address/detail",
-    "pages/shop/index",
     "pages/login/login"
   ],
   "window": {
@@ -40,12 +39,6 @@
         "text": "分类",
         "iconPath": "images/tabBar/cate.png",
         "selectedIconPath": "images/tabBar/cate_on.png"
-      },
-      {
-        "pagePath": "pages/shop/index",
-        "text": "积分商城",
-        "iconPath": "images/tabBar/cart.png",
-        "selectedIconPath": "images/tabBar/cart_on.png"
       },
       {
         "pagePath": "pages/flow/index",
