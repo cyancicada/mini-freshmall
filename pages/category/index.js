@@ -34,6 +34,7 @@ Page({
     no_more: false,
 
     page: 1,
+    categoryId : 1,
   },
 
   onLoad: function(t) {
@@ -89,14 +90,15 @@ Page({
       curNav,
       curIndex,
       scrollTop: 0,
-      page: 1
+      page: 1,
+      categoryId : curNav
     },function (page) {
       // 获取商品列表
       App._get('goods/lists', {
         page: _this.data.page || 1,
         sortType: _this.data.sortType,
         sortPrice: _this.data.sortPrice ? 1: 0,
-        category_id: curNav || 0,
+        category_id: curNav,
         search: _this.data.option.search || '',
       }, function (result) {
           let resultList = result.data.list
@@ -131,7 +133,7 @@ Page({
       page: page || 1,
       sortType: _this.data.sortType,
       sortPrice: _this.data.sortPrice ? 1: 0,
-      category_id: _this.data.option.category_id || 0,
+      category_id: _this.data.categoryId || 1,
       search: _this.data.option.search || '',
     }, function (result) {
         let resultList = result.data.list
