@@ -1,5 +1,28 @@
 let App = getApp();
-
+const multiArray = [
+  [
+    '今天', 
+    '明天', 
+    '后天'
+    ], 
+    [
+      '06:00~07:00',
+      '07:00~08:00',
+      '08:00~09:00',
+      '09:00~10:00', 
+      '10:00~11:00', 
+      '11:00~12:00', 
+      '12:00~13:00', 
+      '13:00~14:00', 
+      '14:00~15:00', 
+      '15:00~16:00', 
+      '16:00~17:00', 
+      '17:00~18:00', 
+      '18:00~19:00', 
+      '19:00~20:00', 
+      '20:00~21:00',
+      ]
+    ];
 Page({
 
   /**
@@ -8,6 +31,9 @@ Page({
   data: {
     order_id: null,
     order: {},
+    multiArray: multiArray,
+    multiIndex: [1, 0],
+
   },
 
   /**
@@ -133,6 +159,26 @@ Page({
         order: _this.data.order
       });
     });
-    
+  },
+  bindMultiPickerColumnChange: function (e) {
+    var data = {
+      multiArray: this.data.multiArray,
+      multiIndex: this.data.multiIndex
+    };
+    data.multiIndex[e.detail.column] = e.detail.value;
+    this.setData(data);
+  },
+  bindMultiPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    let _this = this;
+    let data = { 
+      order_id: _this.data.order.order_id,
+      claim_delivery_time: e.detail.value
+      };
+    App._post_form('user.order/deliveryTime', data, function (result) {
+      _this.setData({
+        multiIndex: e.detail.value
+      });
+    });
   },
 });
