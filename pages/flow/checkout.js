@@ -12,11 +12,13 @@ Page({
     address: null, // 默认收货地址
     exist_address: false, // 是否存在收货地址
     goods: {}, // 商品信息
-
+    
     disabled: false,
 
     hasError: false,
     error: '',
+
+    time:'',
   },
 
   /**
@@ -26,6 +28,12 @@ Page({
     // 当前页面参数
     this.data.options = options;
     console.log(options);
+    let d = new Date();
+    let h = d.getHours() + 1;
+    let m = d.getMinutes()
+    this.setData({
+      time: h + ':' + m
+    })
   },
 
   /**
@@ -153,6 +161,7 @@ Page({
         goods_id: options.goods_id,
         goods_num: options.goods_num,
         goods_sku_id: options.goods_sku_id,
+        delivery_time: this.data.time,
       }, function(result) {
         // success
         console.log('success');
@@ -170,7 +179,9 @@ Page({
 
     // 创建订单-购物车结算
     else if (options.order_type === 'cart') {
-      App._post_form('order/cart', {}, function(result) {
+      App._post_form('order/cart', {
+        delivery_time: this.data.time
+      }, function(result) {
         // success
         console.log('success');
         callback(result);
@@ -185,6 +196,12 @@ Page({
       });
     }
 
+  },
+  bindTimeChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      time: e.detail.value
+    })
   },
 
 

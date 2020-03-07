@@ -89,6 +89,12 @@
         <text class="flex-five col-m t-r">+￥{{order.express_price}}</text>
       </view>
       <view class="dis-flex flow-all-list-cont">
+        <text class="flex-five col-7">配送时间:</text>
+        <picker class="flex-five col-m t-r" mode="time" value="{{order.claim_delivery_time}}" start="05:00" end="20:00" bindchange="bindTimeChange">
+            <text>今天：{{order.claim_delivery_time}}</text>
+            </picker>
+      </view>
+      <view class="dis-flex flow-all-list-cont">
         <text class="flex-five col-7">应付金额:</text>
         <text class="flex-five col-m t-r">￥{{order.pay_price}}</text>
       </view>

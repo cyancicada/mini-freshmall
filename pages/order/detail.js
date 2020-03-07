@@ -24,6 +24,10 @@ Page({
   getOrderDetail: function (order_id) {
     let _this = this;
     App._get('user.order/detail', { order_id }, function (result) {
+      if (!result.data.order.claim_delivery_time || result.data.order.claim_delivery_time == ''){
+        let d = new Date();
+        result.data.order.claim_delivery_time = (d.getHours() + 1) + ':' + d.getMinutes();
+      }
       _this.setData(result.data);
     });
   },
@@ -63,7 +67,12 @@ Page({
   payOrder: function (e) {
     let _this = this;
     let order_id = _this.data.order_id;
-
+    let d = new Date();
+    let c = (d.getHours() + 1) + ':' + d.getMinutes();
+    if (c > _this.data.order.claim_delivery_time) {
+      App.showError('配送时间请选择大于今日：' + c);
+      return
+    }
     // 显示loading
     wx.showLoading({ title: '正在处理...', });
     App._post_form('user.order/pay', { order_id }, function (result) {
@@ -107,5 +116,21 @@ Page({
     });
   },
 
-
+  bindTimeChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    
+    this.data.order.claim_delivery_time = e.detail.value
+    let d = new Date();
+    let c = (d.getHours()+1)+':'+d.getMinutes();
+    if (c > e.detail.value) {
+      App.showError('配送时间请选择大于今日：' + c);
+      return
+    }
+    App._post_form('user.order/deliveryTime', this.data.order , function (result) {
+      this.setData({
+        order: this.data.order
+      });
+    });
+    
+  },
 });
