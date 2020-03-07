@@ -67,7 +67,11 @@ Page({
     let order_id = _this.data.order_id;
     // 显示loading
     wx.showLoading({ title: '正在处理...', });
-    App._post_form('user.order/pay', { order_id }, function (result) {
+    let data = {
+      order_id: order_id,
+      delivery_time:_this.data.multiIndex,
+    };
+    App._post_form('user.order/pay', data, function (result) {
       if (result.code === -10) {
         App.showError(result.msg);
         return false;
