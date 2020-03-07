@@ -65,7 +65,8 @@
     <view class="dis-flex flow-all-list">
       <text class="flex-five">备注:</text>
       <view class="weui-cell weui-cell_input">
-        <input class="weui-input" name="remark" auto-focus placeholder="选填，告诉小哥你的特殊要求"/>
+        <input class="weui-input" name="remark" 
+        bindinput="bindKeyInput" auto-focus placeholder="选填，告诉小哥你的特殊要求"/>
       </view>
     </view>
     <view class="dis-flex flow-all-list">
@@ -89,7 +90,7 @@
     <view class="dis-flex flow-all-list">
       <text class="flex-five">配送时间:</text>
       <view class="flex-five t-r">
-        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{time_range}}">
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange"  value="{{multiIndex}}" range="{{time_range}}">
         <view class="col-m">
         {{time_range[0][multiIndex[0]]}} {{time_range[1][multiIndex[1]]}}
         </view>

@@ -20,6 +20,7 @@ Page({
     error: '',
     time_range: [],
     multiIndex: [1, 0],
+    remark:'',
   },
 
   /**
@@ -157,6 +158,7 @@ Page({
         goods_num: options.goods_num,
         goods_sku_id: options.goods_sku_id,
         delivery_time: this.data.multiIndex,
+        remark:this.data.remark,
       }, function(result) {
         // success
         console.log('success');
@@ -198,18 +200,15 @@ Page({
       time: e.detail.value
     })
   },
-  bindMultiPickerColumnChange: function (e) {
-    var data = {
-      multiArray: this.data.multiArray,
-      multiIndex: this.data.multiIndex
-    };
-    data.multiIndex[e.detail.column] = e.detail.value;
-    this.setData(data);
-  },
   bindMultiPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       multiIndex: e.detail.value
     })
   },
+  bindKeyInput:function(e){
+    this.setData({
+      remark: e.detail.value
+    })
+  }
 });
