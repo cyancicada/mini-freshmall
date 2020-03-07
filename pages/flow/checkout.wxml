@@ -83,9 +83,9 @@
     <view class="dis-flex flow-all-list">
       <text class="flex-five">配送时间:</text>
       <view class="flex-five t-r">
-        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{time_range}}">
         <view class="col-m">
-        {{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}}
+        {{time_range[0][multiIndex[0]]}} {{time_range[1][multiIndex[1]]}}
         </view>
       </picker>
       </view>

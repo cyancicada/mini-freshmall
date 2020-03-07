@@ -1,28 +1,4 @@
 let App = getApp();
-const multiArray = [
-  [
-    '今天', 
-    '明天', 
-    '后天'
-    ], 
-    [
-      '06:00~07:00',
-      '07:00~08:00',
-      '08:00~09:00',
-      '09:00~10:00', 
-      '10:00~11:00', 
-      '11:00~12:00', 
-      '12:00~13:00', 
-      '13:00~14:00', 
-      '14:00~15:00', 
-      '15:00~16:00', 
-      '16:00~17:00', 
-      '17:00~18:00', 
-      '18:00~19:00', 
-      '19:00~20:00', 
-      '20:00~21:00',
-      ]
-    ];
 Page({
 
   /**
@@ -31,7 +7,7 @@ Page({
   data: {
     order_id: null,
     order: {},
-    multiArray: multiArray,
+    time_range: [],
     multiIndex: [1, 0],
 
   },
@@ -50,10 +26,6 @@ Page({
   getOrderDetail: function (order_id) {
     let _this = this;
     App._get('user.order/detail', { order_id }, function (result) {
-      if (!result.data.order.claim_delivery_time || result.data.order.claim_delivery_time == ''){
-        let d = new Date();
-        result.data.order.claim_delivery_time = (d.getHours() + 1) + ':' + d.getMinutes();
-      }
       _this.setData(result.data);
     });
   },
