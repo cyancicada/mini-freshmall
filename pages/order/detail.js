@@ -65,12 +65,6 @@ Page({
   payOrder: function (e) {
     let _this = this;
     let order_id = _this.data.order_id;
-    let d = new Date();
-    let c = (d.getHours() + 1) + ':' + d.getMinutes();
-    if (c > _this.data.order.claim_delivery_time) {
-      App.showError('配送时间请选择大于今日：' + c);
-      return
-    }
     // 显示loading
     wx.showLoading({ title: '正在处理...', });
     App._post_form('user.order/pay', { order_id }, function (result) {
