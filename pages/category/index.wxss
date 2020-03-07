@@ -32,7 +32,7 @@ page {
 .cate-left {
   flex-direction: column;
   display: flex;
-  width: 200rpx;
+  /*width: 200rpx;*/
   color: #444;
   height: 100%;
   background: #f8f8f8;
@@ -99,4 +99,7 @@ page {
 .cate-two-box {
   width: 100%;
   padding: 0 10px;
+}
+.category-list .list {
+  height: 570rpx;
 }
