@@ -83,12 +83,16 @@
     <view class="dis-flex flow-all-list">
       <text class="flex-five">配送时间:</text>
       <view class="flex-five t-r">
-          <picker mode="time" value="{{time}}" start="05:00" end="20:00" bindchange="bindTimeChange">
-            <view  class="col-m">今天：{{time}}</view>
-            </picker>
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+        <view class="col-m">
+        {{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}}
+        </view>
+      </picker>
       </view>
     </view>
   </view>
+
+  
 
   <!-- 提交订单 -->
   <view class="flow-fixed-footer b-f m-top10">

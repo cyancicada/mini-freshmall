@@ -1,5 +1,7 @@
 let App = getApp();
 
+const multiArray = [['今天', '明天', '后天'], ['09:00~10:00', '10:00~11:00', '11:00~12:00', '12:00~13:00', '13:00~14:00', '14:00~15:00', '15:00~16:00', '16:00~17:00', '17:00~18:00', '18:00~19:00', '19:00~20:00', '20:00~21:00']];
+
 Page({
 
   /**
@@ -17,8 +19,8 @@ Page({
 
     hasError: false,
     error: '',
-
-    time:'',
+    multiArray: multiArray,
+    multiIndex: [1, 0],
   },
 
   /**
@@ -28,12 +30,6 @@ Page({
     // 当前页面参数
     this.data.options = options;
     console.log(options);
-    let d = new Date();
-    let h = d.getHours() + 1;
-    let m = d.getMinutes()
-    this.setData({
-      time: h + ':' + m
-    })
   },
 
   /**
@@ -161,7 +157,7 @@ Page({
         goods_id: options.goods_id,
         goods_num: options.goods_num,
         goods_sku_id: options.goods_sku_id,
-        delivery_time: this.data.time,
+        delivery_time: this.data.multiIndex,
       }, function(result) {
         // success
         console.log('success');
@@ -180,7 +176,7 @@ Page({
     // 创建订单-购物车结算
     else if (options.order_type === 'cart') {
       App._post_form('order/cart', {
-        delivery_time: this.data.time
+        delivery_time: this.data.multiIndex
       }, function(result) {
         // success
         console.log('success');
@@ -197,12 +193,24 @@ Page({
     }
 
   },
-  bindTimeChange: function (e) {
+  bindchange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       time: e.detail.value
     })
   },
-
-
+  bindMultiPickerColumnChange: function (e) {
+    var data = {
+      multiArray: this.data.multiArray,
+      multiIndex: this.data.multiIndex
+    };
+    data.multiIndex[e.detail.column] = e.detail.value;
+    this.setData(data);
+  },
+  bindMultiPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      multiIndex: e.detail.value
+    })
+  },
 });

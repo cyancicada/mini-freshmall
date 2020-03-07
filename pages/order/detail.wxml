@@ -90,9 +90,13 @@
       </view>
       <view class="dis-flex flow-all-list-cont">
         <text class="flex-five col-7">配送时间:</text>
-        <picker class="flex-five col-m t-r" mode="time" value="{{order.claim_delivery_time}}" start="05:00" end="20:00" bindchange="bindTimeChange">
-            <text>今天：{{order.claim_delivery_time}}</text>
+        <view class="flex-five col-m t-r">
+            <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+            <view>
+            {{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}}
+            </view>
             </picker>
+        </view>
       </view>
       <view class="dis-flex flow-all-list-cont">
         <text class="flex-five col-7">应付金额:</text>
