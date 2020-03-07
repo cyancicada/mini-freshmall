@@ -119,16 +119,18 @@ Page({
   bindTimeChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     
-    this.data.order.claim_delivery_time = e.detail.value
+    
+    let _this = this;
+    _this.data.order.claim_delivery_time = e.detail.value
     let d = new Date();
     let c = (d.getHours()+1)+':'+d.getMinutes();
     if (c > e.detail.value) {
       App.showError('配送时间请选择大于今日：' + c);
       return
     }
-    App._post_form('user.order/deliveryTime', this.data.order , function (result) {
-      this.setData({
-        order: this.data.order
+    App._post_form('user.order/deliveryTime', _this.data.order , function (result) {
+      _this.setData({
+        order: _this.data.order
       });
     });
     
