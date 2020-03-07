@@ -10,7 +10,7 @@
   </view>
   <view class="cate-content dis-flex" wx:if="{{ lists.length > 0 }}">
     <!-- 左侧 一级分类 -->
-    <scroll-view class="cate-left f-28" scroll-y="{{ true }}" style="height: {{ scrollHeight }}px;">
+    <scroll-view class="cate-left f-28" scroll-y="{{ true }}" style="height: {{ scrollHeight }}px; width:100px !important;text-align: center;min-width: 100px;max-width: 100px;">
         <view wx:for="{{lists}}" wx:key="cateLeft">
           <navigator url="../category/index?category_id={{item.category_id}}">
             <text bindtap="selectNav" class="type-nav onelist-hidden {{curNav==item.category_id?'selected':''}}" data-id="{{ item.category_id }}" data-index="{{index}}">{{ item.name }}</text>
