@@ -64,7 +64,7 @@ Page({
       page: page || 1,
       sortType: _this.data.sortType,
       sortPrice: _this.data.sortPrice ? 1: 0,
-      category_id: _this.data.option.category_id || 2,
+      category_id: _this.data.option.category_id || 0,
       search: _this.data.option.search || '',
     }, function (result) {
         let resultList = result.data.list
