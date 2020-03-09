@@ -101,5 +101,5 @@ page {
   padding: 0 10px;
 }
 .category-list .list {
-  height: 570rpx;
+  height: 260px;
 }
