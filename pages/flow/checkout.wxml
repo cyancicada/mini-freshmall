@@ -66,7 +66,7 @@
       <text class="flex-five">备注:</text>
       <view class="weui-cell weui-cell_input">
         <input class="weui-input" name="remark" 
-        bindinput="bindKeyInput" auto-focus placeholder="选填，告诉小哥你的特殊要求"/>
+        bindinput="bindKeyInput" placeholder="选填，告诉小哥你的特殊要求"/>
       </view>
     </view>
     <view class="dis-flex flow-all-list">
