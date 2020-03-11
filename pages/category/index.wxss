@@ -103,3 +103,7 @@ page {
 .category-list .list {
   height: 260px;
 }
+
+.category-list .list .left .img image {
+  height: 270rpx !important;
+}
