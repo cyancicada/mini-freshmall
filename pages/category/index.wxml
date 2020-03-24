@@ -18,30 +18,16 @@
         </view>
     </scroll-view>
 
-    <!-- 右侧 二级分类 -->
-    <!-- <scroll-view class="cate-right b-f" scroll-top="{{ scrollTop }}" scroll-y="true" style="height: {{ scrollHeight }}px; ">
-      <view wx:if="{{list[curIndex]}}">
-        <view class="cate-right-cont">
-          <view class="cate-two-box">
-            <view class="cate-cont-box">
-              <view class="flex-three" data-list="{{index}}" wx:for="{{list[curIndex].child}}" wx:key="cit">
-                <navigator hover-class="none" url="../category/list?category_id={{item.category_id}}">
-                  <view class="cate-img" id="{{item.file_id}}">
-                    <image src="{{item.image.file_path}}"></image>
-                  </view>
-                  <text class="onelist-hidden">{{item.name}}</text>
-                </navigator>
-              </view>
-            </view>
-          </view>
-        </view>
-      </view>
-    </scroll-view> -->
-    <view class="list-header">
-      <scroll-view bindscrolltolower="bindDownLoad" class="weui-panel weui-panel_access" scroll-y="true" style="height: {{scrollHeight}}px;" wx:if="{{list.data.length > 0}}">
+  <scroll-view bindscrolltolower="bindDownLoad" 
+      class="weui-panel weui-panel_access" 
+      scroll-y="true" 
+      style="height: {{scrollHeight}}px;"
+      wx:if="{{list.data.length > 0}}">
         <view class="new">
           <view class="category-list {{arrange}}">
-            <navigator class="list b-f" hover-class="none" url="../goods/index?goods_id={{item.goods_id}}" wx:for="{{list.data}}" wx:key="list">
+            <navigator class="list b-f" 
+            hover-class="none" url="../goods/index?goods_id={{item.goods_id}}"
+             wx:for="{{list.data}}" wx:key="list">
               <view class="left">
                 <view class="img">
                   <image class="goodsImg" mode="scaleToFill" src="{{item.image[0].file_path}}"></image>
@@ -58,11 +44,11 @@
               </view>
             </navigator>
           </view>
-        </view>
-        <!-- <view hidden="{{!no_more}}" class="no-more f-30">亲, 没有更多了</view> -->
-      </scroll-view>
-    </view>
-    <view wx:if="{{!noList && !list.data.length}}" class="yoshop-notcont" style="margin-top:130px;">
+      </view>
+    </scroll-view>
+
+
+    <view wx:if="{{!noList && !list.data.length}}" class="yoshop-notcont">
       <view class="img">
         <image mode="aspectFit" src="../../images/no_content.png"></image>
       </view>
@@ -76,5 +62,4 @@
       <text class="cont">亲，暂无商品分类哦</text>
     </view>
   </view>
-
 </view>

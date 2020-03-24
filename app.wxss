@@ -20,7 +20,8 @@ page {
 }
 
 .yoshop-notcont {
-  margin: 130rpx 100rpx;
+  margin-top: 36%;
+  margin-left: 7%;
 }
 
 .yoshop-notcont .cont {

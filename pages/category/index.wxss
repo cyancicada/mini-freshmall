@@ -2,6 +2,7 @@
 
 page {
   background: #fff;
+  width: 100%;
 }
 
 /* 搜索框 */

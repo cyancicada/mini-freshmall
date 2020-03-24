@@ -44,7 +44,7 @@ Page({
     // 获取分类列表
     _this.getCategoryList();
     // 记录option
-    _this.setData({ t}, function () {
+    _this.setData({ t }, function () {
       // 获取商品列表
       _this.getGoodsList(true);
     });
@@ -58,7 +58,7 @@ Page({
     wx.getSystemInfo({
       success: function(res) {
         _this.setData({
-          scrollHeight: res.windowHeight - 90,
+          scrollHeight: res.windowHeight - 0,
         });
       }
     });
@@ -76,6 +76,10 @@ Page({
         curNav: data.list.length > 0 ? data.list[0].category_id : true,
         notcont: !data.list.length
       });
+      if (data.list.length > 0 ){
+        _this.categoryId = data.list[0].category_id
+      }
+  
     });
   },
 
@@ -133,7 +137,7 @@ Page({
       page: page || 1,
       sortType: _this.data.sortType,
       sortPrice: _this.data.sortPrice ? 1: 0,
-      category_id: _this.data.categoryId || 1,
+      category_id: _this.categoryId,
       search: _this.data.option.search || '',
     }, function (result) {
         let resultList = result.data.list
