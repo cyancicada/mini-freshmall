@@ -295,7 +295,19 @@ App({
   checkIsLogin() {
     return wx.getStorageSync('token') != '' && wx.getStorageSync('user_id') != '';
   },
+  /**
+   * 退出登录
+   */
+  loginout(){
+    try {
+      wx.clearStorageSync();
 
+      return true;
+    } catch (e) {
+      // Do something when catch error
+    }
+    return false;
+  },
   /**
    * 授权登录
    */

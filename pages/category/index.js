@@ -74,12 +74,9 @@ Page({
       _this.setData({
         lists: data.list,
         curNav: data.list.length > 0 ? data.list[0].category_id : true,
-        notcont: !data.list.length
+        notcont: !data.list.length,
+        categoryId: data.list.length > 0 ? data.list[0].category_id : true
       });
-      if (data.list.length > 0 ){
-        _this.categoryId = data.list[0].category_id
-      }
-  
     });
   },
 
@@ -90,7 +87,7 @@ Page({
     let curNav = t.target.dataset.id,
       curIndex = parseInt(t.target.dataset.index),
       _this = this;
-    _this.setData({
+    this.setData({
       curNav,
       curIndex,
       scrollTop: 0,
@@ -133,11 +130,12 @@ Page({
    */
   getGoodsList: function (is_super, page) {
     let _this = this;
+    console.log(_this.data.curNav, _this.data.categoryId)
     App._get('goods/lists', {
       page: page || 1,
       sortType: _this.data.sortType,
       sortPrice: _this.data.sortPrice ? 1: 0,
-      category_id: _this.categoryId,
+      category_id: _this.data.categoryId,
       search: _this.data.option.search || '',
     }, function (result) {
         let resultList = result.data.list
@@ -177,9 +175,6 @@ Page({
       this.setData({ no_more: true });
       return false;
     }
-    console.log(this.data.page,33333333);
     this.getGoodsList(false, ++this.data.page);
-    console.log(this.data.page,11111111);
-    console.log(this.data.list.last_page,22222222);
   },
 });

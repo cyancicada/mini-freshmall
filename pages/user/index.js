@@ -10,12 +10,10 @@ Page({
     userInfo: {},
     orderCount: {},
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
   },
 
   /**
@@ -93,6 +91,16 @@ Page({
       return false;
     }
     return true;
+  },
+  loginoutClick: function (even) {
+    let _this = this;
+    if(App.loginout()){
+      _this.setData({
+        userInfo:{},
+        isLogin:false,
+      })
+      _this.onLoad()
+    }
   },
 
 

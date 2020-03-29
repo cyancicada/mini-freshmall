@@ -98,6 +98,9 @@
 .icon-help:before {
   content: "\e6c3";
 }
+.icon-logout:before {
+  content: "\e6b6";
+}
 
 .icon-huo:before {
   content: "\e6c4";

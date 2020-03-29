@@ -122,3 +122,10 @@
   color: #444;
   margin-left: 20rpx;
 }
+
+.user-logout {
+  margin-left: 36%;
+  margin-bottom: 24%;
+  font-size: 32rpx;
+  padding: 20rpx 0;
+}
