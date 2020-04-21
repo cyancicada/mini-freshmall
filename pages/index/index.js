@@ -36,7 +36,10 @@ Page({
       _this.setData(result.data);
     });
   },
-
+  addToMyCard:function(e){
+    let goodinfo = e.target.dataset.goodinfo
+    App.addToMyCardApp(goodinfo.goods_id,'')
+  },
   /**
    * 计算图片高度
    */

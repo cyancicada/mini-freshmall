@@ -26,6 +26,7 @@
               <text>{{item.goods_name}}</text>
             </view>
             <text class="price col-m f-30">￥{{item.spec[0].goods_price}}</text>
+      
           </view>
         </navigator>
       </scroll-view>
@@ -39,19 +40,23 @@
       <view class="hr"></view>
     </view>
     <view class="category-list">
-      <navigator class="list b-f" hover-class="none" url="../goods/index?goods_id={{item.goods_id}}" wx:for="{{best}}" wx:key="this">
-        <view class="left">
+      <view class="list b-f"  wx:for="{{best}}" wx:key="this">
+        <navigator class="left" hover-class="none" url="../goods/index?goods_id={{item.goods_id}}">
           <view class="img">
             <image class="goodsImg" mode="scaleToFill" src="{{item.image[0].file_path}}"></image>
           </view>
-        </view>
+        </navigator>
         <view class="right">
           <view class="cont">
             <text class="f-30 title twolist-hidden m-top10">{{item.goods_name}}</text>
             <text class="price f-34 col-m f-w">￥{{item.spec[0].goods_price}}</text>
+            <!--加入购物车-->
+            <text  class="price  f-34 col-m f-w" style="font-size: 20px;float: right;" bindtap="addToMyCard" 
+            data-goodinfo="{{item}}"
+            size="mini" type="primary">+</text>
           </view>
         </view>
-      </navigator>
+      </view>
     </view>
 
     <!-- 底线 -->

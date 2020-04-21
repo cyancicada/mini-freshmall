@@ -177,7 +177,8 @@ Page({
     // 创建订单-购物车结算
     else if (options.order_type === 'cart') {
       App._post_form('order/cart', {
-        delivery_time: this.data.multiIndex
+        delivery_time: this.data.multiIndex,
+        remark:this.data.remark
       }, function(result) {
         // success
         console.log('success');

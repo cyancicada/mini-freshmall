@@ -308,6 +308,23 @@ App({
     }
     return false;
   },
+  //加入购物车
+  addToMyCardApp(goods_id,goods_sku_id){
+    let App = this;
+    console.log(goods_id,goods_sku_id)
+   // 加入购物车
+      App._post_form('cart/add', {
+        goods_id: goods_id,
+        goods_num: 1,
+        goods_sku_id: goods_sku_id,
+      }, function(result) {
+        wx.showModal({
+          title: result.msg,
+          icon: 'success',
+          showCancel: false
+        })
+      });
+  },
   /**
    * 授权登录
    */

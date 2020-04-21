@@ -15,7 +15,8 @@
     "pages/address/create",
     "pages/address/detail",
     "pages/login/login",
-    "pages/shop/index"
+    "pages/shop/index",
+    "pages/print/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",

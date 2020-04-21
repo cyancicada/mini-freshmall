@@ -95,7 +95,7 @@
       </button>
     </form>
 
-    <form wx:if="{{ isLogin }}">
+    <form wx:if="{{ isLogin}}">
       <button  formType="submit" class="btn-normal" bindtap='loginoutClick'>
         <view class="menus-item dis-flex b-f">
           <view class="menus-item__left flex-box dis-flex flex-y-center">
@@ -105,5 +105,22 @@
         </view>
       </button>
     </form>
+
+
+    <form wx:if="{{ isLogin &&  userInfo.is_print }}" bindsubmit="onTargetMenus" data-url="pages/print/index" report-submit="true">
+      <button formType="submit" class="btn-normal">
+        <view class="menus-item dis-flex b-f">
+          <view class="menus-item__left flex-box dis-flex flex-y-center">
+            <text class="iconfont icon-help f-34"></text>
+            <text class="menus-item__name f-30">打单服务</text>
+          </view>
+          <view class="menus-item__right flex-box dis-flex flex-x-end flex-y-center">
+            <text class="iconfont icon-xiangyoujiantou f-26 col-7"></text>
+          </view>
+        </view>
+      </button>
+    </form>
+
+
   </view>
 </view>

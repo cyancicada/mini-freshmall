@@ -67,6 +67,7 @@ Page({
     if (!_this.onCheckLogin()) {
       return false;
     }
+    console.log(_this.data.userInfo)
     wx.navigateTo({
       url: '/' + e.currentTarget.dataset.url
     })

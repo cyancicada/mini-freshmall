@@ -46,10 +46,14 @@ Page({
     // 记录option
     _this.setData({ t }, function () {
       // 获取商品列表
-      _this.getGoodsList(true);
+
+      setTimeout(() => _this.getGoodsList(true), 100);  
     });
   },
-
+  addToMyCard:function(e){
+    let goodinfo = e.target.dataset.goodinfo
+    App.addToMyCardApp(goodinfo.goods_id,'')
+  },
   /**
    * 设置分类列表高度
    */
@@ -130,7 +134,7 @@ Page({
    */
   getGoodsList: function (is_super, page) {
     let _this = this;
-    console.log(_this.data.curNav, _this.data.categoryId)
+    console.log(_this.data, _this.data.categoryId)
     App._get('goods/lists', {
       page: page || 1,
       sortType: _this.data.sortType,
