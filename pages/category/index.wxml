@@ -36,12 +36,12 @@
                 <view class="cont">
                   <text class="f-30 title twolist-hidden m-top10">{{item.goods_name}}</text>
                   <view class="price f-34 col-m m-top10">
-                    ￥{{item.spec[0].goods_price}}
-                    <text class="del f-22" wx:if="{{item.spec[0].line_price>0}}">{{item.spec[0].line_price}}</text>
-                  <!--加入购物车-->
-                  <text  class="price" style="font-size: 20px;float: right;" bindtap="addToMyCard" 
-                  data-goodinfo="{{item}}"
-                  size="mini" type="primary">+</text>
+					￥{{item.spec[0].goods_price}}
+					<text class="del f-22" wx:if="{{item.spec[0].line_price>0}}">{{item.spec[0].line_price}}</text>
+				  <!--加入购物车-->
+				  <text class="addBtn" bindtap="addToMyCard" 
+				  data-goodinfo="{{item}}"
+				  size="mini" type="primary">+</text>
                   </view>
                 </view>
               </view>

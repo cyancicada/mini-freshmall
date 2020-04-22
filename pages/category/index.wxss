@@ -108,3 +108,14 @@ page {
 .category-list .list .left .img image {
   height: 270rpx !important;
 }
+.addBtn{
+	width:40rpx;
+	height: 40rpx;
+	line-height: 36rpx;
+	text-align: center;
+	background-color: green;
+	color:#fff;
+	border-radius: 20rpx;
+	float: right;
+	font-size: 40rpx;
+}
