@@ -51,7 +51,7 @@
             <text class="f-30 title twolist-hidden m-top10">{{item.goods_name}}</text>
             <text class="price f-34 col-m f-w">￥{{item.spec[0].goods_price}}</text>
             <!--加入购物车-->
-            <text  class="price  f-34 col-m f-w" style="font-size: 20px;float: right;" bindtap="addToMyCard" 
+            <text  class="addBtn  f-34 f-w" bindtap="addToMyCard" 
             data-goodinfo="{{item}}"
             size="mini" type="primary">+</text>
           </view>
