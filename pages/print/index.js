@@ -251,7 +251,7 @@ Page({
       .setSize(2, 2)
       .print('#美菜美价小程序')
       .setSize(1, 1)
-      .print('明义网络')
+      .print('美菜美价')
       .setSize(2, 2)
       .print('在线支付(已支付)')
       .setSize(1, 1)

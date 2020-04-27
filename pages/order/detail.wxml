@@ -18,10 +18,10 @@
     <!-- 物流信息 -->
     <view class="flow-all-money b-f padding-box m-top20" wx:if="{{order.delivery_status.value == 20}}">
       <view class="dis-flex flow-all-list-cont">
-        <text class="col-7">快递公司: {{order.express_company}}</text>
+        <text class="col-7">配送员: {{order.express_company}}</text>
       </view>
       <view class="dis-flex flow-all-list-cont">
-        <text class="col-7" selectable="{{true}}">快递单号: {{order.express_no}}</text>
+        <text class="col-7" selectable="{{true}}">配送电话: {{order.express_no}}</text>
       </view>
     </view>
 
