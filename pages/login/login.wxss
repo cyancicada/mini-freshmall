@@ -64,3 +64,13 @@ page {
   border-radius: 999rpx;
   text-align: center;
 }
+.footer {
+  position: fixed;
+  text-align: center;
+  font-size: 24rpx;
+  bottom: 10px;
+  color: #666;
+}
+.jump {
+  display: inline-block;
+}
