@@ -158,7 +158,7 @@ App({
           }
         },
         fail(res) {
-          // console.log(res);
+          res.errMsg = '网络请求出错,请重试'
           App.showError(res.errMsg, () => {
             fail && fail(res);
           });
@@ -208,10 +208,11 @@ App({
           });
           return false;
         }
+      
         success && success(res.data);
       },
       fail(res) {
-        // console.log(res);
+        res.errMsg = '网络请求出错,请重试'
         App.showError(res.errMsg, () => {
           fail && fail(res);
         });
