@@ -91,7 +91,8 @@
       <view class="dis-flex flow-all-list-cont">
         <text class="flex-five col-7">配送时间:</text>
         <view class="flex-five col-m t-r">
-            <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{time_range}}">
+        <view wx:if="{{order.delivery_status.value==20 && order.receipt_status.value==10}}">{{order.claim_delivery_time}} {{order.claim_time_range}}</view>
+            <picker wx:else  mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{time_range}}">
             <view>
             {{time_range[0][multiIndex[0]]}} {{time_range[1][multiIndex[1]]}}
             </view>

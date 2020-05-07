@@ -341,6 +341,7 @@ App({
     wx.login({
       success(res) {
         // 发送用户信息
+        console.log(e,res)
         App._post_form('user/login', {
           code: res.code,
           user_info: e.detail.rawData,
