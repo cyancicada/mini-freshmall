@@ -75,7 +75,7 @@ Page({
       this.data.error = '手机号长度有误';
       return false;
     }
-    let reg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+    let reg = /^1\d{10}$/;
     if (!reg.test(values.phone)) {
       this.data.error = '手机号不符合要求';
       return false;
