@@ -34,7 +34,7 @@ Page({
     no_more: false,
 
     page: 1,
-    categoryId : 1,
+    categoryId : 10001,
   },
 
   onLoad: function(t) {
@@ -139,7 +139,7 @@ Page({
       page: page || 1,
       sortType: _this.data.sortType,
       sortPrice: _this.data.sortPrice ? 1: 0,
-      category_id: _this.data.categoryId,
+      category_id: _this.data.categoryId || 10001,
       search: _this.data.option.search || '',
     }, function (result) {
         let resultList = result.data.list
