@@ -18,7 +18,8 @@
     "pages/shop/index",
     "pages/print/index",
     "pages/login/service",
-    "pages/login/self"
+    "pages/login/self",
+    "pages/user/balane"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
