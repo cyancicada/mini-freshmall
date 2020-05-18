@@ -61,6 +61,7 @@ Page({
       }
       _this.data.hasError = false;
       _this.setData(result.data);
+      console.log(result.data)
     };
 
     // 立即购买
