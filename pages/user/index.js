@@ -8,6 +8,7 @@ Page({
   data: {
     isLogin: false,
     userInfo: {},
+    balance:{},
     orderCount: {},
   },
   /**
