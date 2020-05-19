@@ -1,0 +1,14 @@
+<view class="container">
+  <!-- 余额 -->
+  <view class="balance">
+    <view class="balance-header" style="background-image: url('/images/user-bg.png');">
+        <text class="balance-header-name">余额(元)</text>
+        <text class="balance-header-number">{{balance__number}}</text>
+    </view>
+    <view class="balance-menu">
+        <view class="">我的余额</view>
+        <view class="balance_detailed" bindtap="onTargetMenus" data-url="pages/user/balance_detailed" data-type="detailed">余额明细</view>
+        <view class="recharge" bindtap="onTargetMenus" data-url="pages/user/recharget" data-type="recharget">充值</view>
+    </view>  
+  </view>
+</view>

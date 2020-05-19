@@ -1,0 +1,23 @@
+<view class="container">
+  <!-- 充值 -->
+  <view class="recharget" value="{{money}}">
+      <view>
+        <text>充值金额</text>
+        <view class="input_money">
+          <text>￥</text>
+          <input name="monery" bindinput='input' placeholder-style="color:#fd0" placeholder="请输入充值金额" type="number" value="{{money}}" maxlength="9"></input>
+        </view>
+      </view>
+      <view class="quota_options">
+        <view bindtap="btn10"  style="{{state1}}" data="10">￥10</view>
+        <view bindtap="btn20"  style="{{state2}}" data="20">￥20</view>
+        <view bindtap="btn30"  style="{{state3}}" data="30">￥30</view>
+        <view bindtap="btn50"  style="{{state4}}" data="50">￥50</view>
+        <view bindtap="btn100" style="{{state5}}" data="100">￥100</view>
+        <view bindtap="btn200" style="{{state6}}" data="200">￥200</view>
+      </view>
+  </view>
+  <view class="padding-box m-top20 profile-btn recharge_next">
+    <view bindtap="submit" style="{{recharge_next_button}}" disabled="{{disabled}}">下一步</view>
+  </view>
+</view>

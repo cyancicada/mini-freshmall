@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "充值",
+  "navigationBarBackgroundColor": "#ffdd00",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "shortcut": "/components/shortcut/shortcut"
+  }
+  
+}

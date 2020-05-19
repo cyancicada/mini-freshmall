@@ -1,0 +1,71 @@
+/* 余额 */
+.balance {
+  position: relative;
+  background: #fff;
+  margin-bottom: 150rpx;
+}
+
+/* 余额头部 */
+.balance-header {
+  padding-top: 1px;
+  width: 100%;
+  height: 310rpx;
+  background-color: #fd0;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: auto 100%;
+}
+
+.balance-header-name {
+  margin-top: 10rpx;
+  width: 30%;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: block;
+  font-size: 32rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.balance-header-number {
+  margin-top: 10rpx;
+  width: 30%;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: block;
+  font-size: 32rpx;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+
+/* 余额菜单 */
+.balance-menu{
+  position: absolute;
+  left: 19rpx;
+  top: 220rpx;
+  margin: auto;
+  padding: 25rpx;
+  box-sizing:border-box;
+  width: 95%;
+  height:500rpx;
+  box-shadow: 0 1rpx 5rpx 0px rgba(0, 0, 0, 0.05);
+  font-size: 30rpx;
+  border-top: 1rpx solid #eee;
+  border-radius: 5rpx;
+  background: #fff;
+}
+
+.balance-menu>view{
+  width:40%;
+  height:80rpx;
+  line-height:80rpx;
+  text-align: center;
+  display: inline-block;
+  background:#ffdd00;
+  border-radius: 5rpx;
+  color:#fff;
+
+}
+.balance-menu>view:nth-child(2n){margin-left:20%}
+.balance-menu>view:nth-child(n+3){margin-top:25rpx;}

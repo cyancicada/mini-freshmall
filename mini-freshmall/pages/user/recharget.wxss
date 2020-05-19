@@ -1,0 +1,70 @@
+view{padding:0;margin:0}
+.recharget{padding:0 25rpx}
+.recharget>view>text{
+  margin: 10rpx 0 0 0rpx;
+  width: 30%;
+  height: 120rpx;
+  line-height: 120rpx;
+  display: block;
+  font-size: 32rpx;
+  text-align: left;
+  color: #fd0;
+
+}
+
+.input_money>text{
+  display: block;
+  position: absolute;
+  color:#fd0;
+  font-size: 32rpx;
+}
+.input_money{
+  width:100%;
+  border-bottom:1px solid #fd0;
+  
+}
+
+
+input{
+  color:#fd0;
+  font-size:32rpx;
+  margin:0rpx 0 10rpx;
+  padding-left:40rpx;
+  
+}
+.quota_options{
+  margin-top:20rpx;
+}
+.quota_options view{
+  width:30%;
+  height:80rpx;
+  line-height:80rpx;
+  margin-top:20rpx;
+  border:2rpx solid #fd0;
+  color:#fd0;
+  background: #fff;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10rpx;
+  font-size:32rpx;
+  box-sizing:border-box;
+}
+
+.quota_options view:nth-child(3n-1),.quota_options view:nth-child(3n){
+  margin-left:5%
+}
+
+.quota_options view:nth-child(3n-2){
+  margin-left:0%
+}
+
+.recharge_next{
+  margin-top:80rpx;
+  height:80rpx;
+  line-height:80rpx;
+  text-align: center;
+  color:#fff;
+  border-radius: 10rpx
+}
+
+.recharge_next button{background:#fd0;opacity:1;}
