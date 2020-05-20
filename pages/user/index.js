@@ -8,8 +8,8 @@ Page({
   data: {
     isLogin: false,
     userInfo: {},
-    balance:{},
     orderCount: {},
+    balance__number:""
   },
   /**
    * 生命周期函数--监听页面加载
@@ -23,11 +23,18 @@ Page({
   onShow() {
     let _this = this;
     _this.setData({
-      isLogin: App.checkIsLogin()
+       isLogin: App.checkIsLogin()
     });
     if (_this.data.isLogin) {
+      
       // 获取当前用户信息
-      _this.getUserDetail();
+       _this.getUserDetail();
+      //获取当前用户余额
+      App._get('user.balance/me', {}, result => {
+        _this.setData({
+          balance__number: "￥" + result.data.balance
+        })
+      });
     }
   },
 
@@ -38,7 +45,8 @@ Page({
     let _this = this;
     App._get('user.index/detail', {}, result => {
       _this.setData(result.data);
-    });
+      });
+    
   },
 
   /**
@@ -68,7 +76,6 @@ Page({
     if (!_this.onCheckLogin()) {
       return false;
     }
-    console.log(_this.data.userInfo)
     wx.navigateTo({
       url: '/' + e.currentTarget.dataset.url
     })

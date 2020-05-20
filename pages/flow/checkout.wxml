@@ -97,6 +97,14 @@
       </picker>
       </view>
     </view>
+
+    <view class="dis-flex flow-all-list"> 
+			<view class="flex-five balance">余额购买</view>
+        <text class="balance_deduction">{{balance_deduction}}</text>
+      <checkbox-group bindchange="listenerchecked" >
+        <checkbox value="{{check}}" />
+      </checkbox-group>
+		</view>
   </view>
 
   

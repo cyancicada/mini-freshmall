@@ -45,6 +45,7 @@
 .user-header .user-header-cont .user-header-cont-name {
   font-size: 32rpx;
   padding: 20rpx 0;
+  color:#fff
 }
 
 /* 订单导航栏 */
@@ -129,3 +130,8 @@
   font-size: 32rpx;
   padding: 20rpx 0;
 }
+
+
+
+/* 王涛2020.05.17 */
+.balance_number{margin-right:20rpx}

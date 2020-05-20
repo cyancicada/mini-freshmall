@@ -68,26 +68,20 @@
   </view>
   <!-- 菜单列表 -->
   <view class="menus-list m-top20">
-
-  <!-- 余额中心 -->
-  
-    <form bindsubmit="onTargetMenus" data-url="pages/user/balane" report-submit="true">
+    <form bindsubmit="onTargetMenus" data-url="pages/user/balance" report-submit="true">
       <button formType="submit" class="btn-normal">
         <view class="menus-item dis-flex b-f">
           <view class="menus-item__left flex-box dis-flex flex-y-center">
-            <text class="iconfont icon-help f-34"></text>
-            <text class="menus-item__name f-30">我的余额</text>
+            <text class="iconfont icon-map f-34 balance"></text>
+            <text class="menus-item__name f-30">余额</text>
           </view>
           <view class="menus-item__right flex-box dis-flex flex-x-end flex-y-center">
-            <text wx:if="{{ isLogin && balance.balance }}" class="f-26 col-7">{{ balance.balance }}</text>
-            <text wx:else class="f-26 col-7">0.00</text>
+            <text class="balance_number">{{balance__number}}</text>
             <text class="iconfont icon-xiangyoujiantou f-26 col-7"></text>
           </view>
         </view>
       </button>
     </form>
-
-    <!-- 余额中心 -->
     <form bindsubmit="onTargetMenus" data-url="pages/address/index" report-submit="true">
       <button formType="submit" class="btn-normal">
         <view class="menus-item dis-flex b-f">
@@ -101,6 +95,7 @@
         </view>
       </button>
     </form>
+    
     <form bindsubmit="onTargetMenus" data-url="pages/user/help" report-submit="true">
       <button formType="submit" class="btn-normal">
         <view class="menus-item dis-flex b-f">

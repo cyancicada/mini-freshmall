@@ -1,13 +1,19 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/user/recharget",
+    
+    
+    "pages/user/index",
+    "pages/user/balance_detailed",
+    "pages/user/balance",
     "pages/category/index",
     "pages/category/list",
     "pages/goods/index",
     "pages/search/index",
     "pages/flow/index",
     "pages/flow/checkout",
-    "pages/user/index",
+    
     "pages/user/help",
     "pages/order/index",
     "pages/order/detail",
@@ -18,8 +24,7 @@
     "pages/shop/index",
     "pages/print/index",
     "pages/login/service",
-    "pages/login/self",
-    "pages/user/balane"
+    "pages/login/self"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
@@ -53,6 +58,7 @@
       },
       {
         "pagePath": "pages/user/index",
+        
         "text": "我的",
         "iconPath": "images/tabBar/user.png",
         "selectedIconPath": "images/tabBar/user_on.png"
