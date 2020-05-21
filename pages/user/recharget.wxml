@@ -18,6 +18,6 @@
       </view>
   </view>
   <view class="padding-box m-top20 profile-btn recharge_next">
-    <view bindtap="submit" style="{{recharge_next_button}}" disabled="{{disabled}}">下一步</view>
+    <view bindtap="submitBalance" style="{{recharge_next_button}}" disabled="{{disabled}}">下一步</view>
   </view>
 </view>

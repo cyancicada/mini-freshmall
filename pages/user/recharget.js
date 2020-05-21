@@ -16,6 +16,12 @@ Page({
     recharge_next_button: "background:#fd0;opacity:1;",
     money: "",
     error: '',
+    balance: 100,
+
+    recharging: false,
+    hasError: false,
+    values: {},
+    payment: {},
   },
 
   /**
@@ -122,7 +128,7 @@ Page({
       _this.data.money = '请选择充值金额';
       App.showError(_this.data.money);
       _this.data.money=""
-      return false; 
+      return false;
     }else{
       console.log(_this.data.money)
       // 按钮禁用
@@ -132,7 +138,7 @@ Page({
       //提交到后端
       App._post_form('', _this.data.money, function (result) {
         App.showSuccess(result.msg, function () {
-          
+
         });
       }, false, function () {
         // 解除禁用
@@ -216,6 +222,71 @@ Page({
     this.setData({
       region: e.detail.value
     })
+  },
+
+  /**
+   * 充提交
+   */
+  submitBalance: function(e) {
+    let _this = this;
+    if(_this.data.money === ''){
+      App.showError('请输入正确充值金额');
+      return false;
+    }
+    if (_this.data.recharging) {
+      return false;
+    }
+
+    if (_this.data.hasError) {
+      App.showError(_this.data.error);
+      return false;
+    }
+
+    // 订单创建成功后回调--微信支付
+    let callback = function(result) {
+      if (result.code !== 1) {
+        App.showError(result.msg);
+        return false;
+      }
+      // 发起微信支付
+      wx.requestPayment({
+        timeStamp: result.data.payment.timeStamp,
+        nonceStr: result.data.payment.nonceStr,
+        package: 'prepay_id=' + result.data.payment.prepay_id,
+        signType: 'MD5',
+        paySign: result.data.payment.paySign,
+        success: function(res) {
+          // 跳转到订单详情
+          wx.navigateBack();
+        },
+        fail: function() {
+          App.showError('取消充值', function() {
+            wx.navigateBack();
+          });
+        },
+      });
+    };
+    // 按钮禁用, 防止二次提交
+    _this.data.recharging = true;
+    // 显示loading
+    wx.showLoading({
+      title: '正在处理...'
+    });
+    App._post_form('user.balance/balance', {
+      balance:_this.data.money,
+    }, function(result) {
+      // success
+      console.log('success');
+      callback(result);
+    }, function(result) {
+      // fail
+      console.log('fail');
+    }, function() {
+      // complete
+      console.log('complete');
+      // 解除按钮禁用
+      _this.data.recharging = false;
+    });
   },
 
 })
