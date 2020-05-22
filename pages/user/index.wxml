@@ -76,7 +76,7 @@
             <text class="menus-item__name f-30">余额</text>
           </view>
           <view class="menus-item__right flex-box dis-flex flex-x-end flex-y-center">
-            <text class="balance_number">{{balance__number}}</text>
+            <text class="balance_number f-30">{{balance__number}}</text>
             <text class="iconfont icon-xiangyoujiantou f-26 col-7"></text>
           </view>
         </view>

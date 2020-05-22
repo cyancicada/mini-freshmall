@@ -6,7 +6,7 @@ view{padding:0;margin:0}
   height: 120rpx;
   line-height: 120rpx;
   display: block;
-  font-size: 32rpx;
+  font-size: 30rpx;
   text-align: left;
   color: #000;
 
@@ -16,7 +16,7 @@ view{padding:0;margin:0}
   display: block;
   position: absolute;
   color:#000;
-  font-size: 32rpx;
+  font-size: 30rpx;
   margin-top:-5rpx;
 }
 .input_money{
@@ -28,7 +28,7 @@ view{padding:0;margin:0}
 
 input{
   color:#000;
-  font-size:32rpx;
+  font-size:30rpx;
   margin:0rpx 0 10rpx;
   padding-left:40rpx;
   
@@ -47,7 +47,7 @@ input{
   display: inline-block;
   text-align: center;
   border-radius: 10rpx;
-  font-size:32rpx;
+  font-size:30rpx;
   box-sizing:border-box;
 }
 
