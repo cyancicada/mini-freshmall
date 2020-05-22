@@ -8,7 +8,8 @@ Page({
   data: {
     height:"",
     alance_detailed_list_n:false,
-    title_footer:false
+    title_footer:false,
+    type:"",
 
   },
   /**
@@ -25,7 +26,8 @@ Page({
     let _this = this;
     //获取当前用户交易记录
     App._get('user.balance/bill', {}, result => {
-      if (result.data){
+      console.log(result.data)
+      if (result.data.length <= 0){
         _this.setData({
           alance_detailed_list_n:true,
         })
@@ -36,7 +38,6 @@ Page({
           title_footer:true
         })
       }
-     
     });
     
 

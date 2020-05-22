@@ -8,7 +8,7 @@ page{position: fixed;top:0;left:0;width:100%;height:100%}
   height: 40rpx;
   line-height: 40rpx;
   display: block;
-  font-size: 32rpx;
+  font-size: 30rpx;
   text-align: left;
   color: #000;
 }
@@ -29,11 +29,10 @@ page{position: fixed;top:0;left:0;width:100%;height:100%}
 }
 .balance_detailed_list view text{display: inline-block;font-size: 30rpx}
 .create_time{width:70%;text-align: left}
-.latest_balance{width:30%;text-align: right;}
+.latest_balance{width:30%;text-align: right;color:#ff495e}
 .trade_no{width:70%;text-align: left;margin-top:20rpx}
-.balance{width:30%;text-align: right}
+.balance{width:30%;text-align: right;color:#ff495e}
 
 /* 无交易记录 */
 .alance_detailed_list_no{width:100%;margin:20rpx auto;text-align: center;color:#ccc}
-
 .title-footer{margin:20rpx 18rpx 0 !important}

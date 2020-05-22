@@ -3,10 +3,10 @@
   <text class="balance_detailed">余额明细</text>
   <scroll-view class="balance_detailed_list" scroll-y="true" style="height:{{height}}px">
     <view class="list" wx:for="{{balance_detailed_list}}">
-        <text class="create_time">时间 {{item.create_time}}</text>
+        <text class="create_time">时间：{{item.create_time}}</text>
         <text class="latest_balance">{{item.latest_balance}}</text>
-        <text class="trade_no">{{item.trade_no}}</text>
-        <text class="balance">{{item.balance}}</text>
+        <text class="trade_no">订单号：{{item.trade_no}}</text>
+        <text class="balance">{{item.balance >=0 ? "+" + item.balance : item.balance}}</text>
     </view>
     <view class="alance_detailed_list_no" wx:if="{{alance_detailed_list_n}}">
         <text>暂无交易记录</text>

@@ -6,7 +6,6 @@
         <text class="balance-header-number">{{balance__number}}</text>
     </view>
     <view class="balance-menu">
-        <view class="">我的余额</view>
         <view class="balance_detailed" bindtap="onTargetMenus" data-url="pages/user/balance_detailed" data-type="detailed">余额明细</view>
         <view class="recharge" bindtap="onTargetMenus" data-url="pages/user/recharget" data-type="recharget">充值</view>
     </view>  

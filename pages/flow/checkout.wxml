@@ -98,13 +98,14 @@
       </view>
     </view>
 
-    <view class="dis-flex flow-all-list"> 
-			<view class="flex-five balance">余额购买</view>
+    <view class="dis-flex flow-all-list" > 
+      <view class="flex-five balance">余额购买</view>
         <text class="balance_deduction">{{balance_deduction}}</text>
-      <checkbox-group bindchange="listenerchecked" >
-        <checkbox value="{{check}}" />
-      </checkbox-group>
-		</view>
+        <view  class="checked" bindtap="checked">
+          <view style="{{checkbox_color}}" checked="{{checked}}"></view>
+        </view>
+        
+    </view>
   </view>
 
   
@@ -116,7 +117,7 @@
         <text class="col-m">￥{{order_pay_price}}</text>
       </view>
       <view bindtap="submitOrder" class="chackout-right">
-        <text class="flow-btn">提交订单</text>
+        <view class="flow-btn">提交订单</view>
       </view>
     </view>
   </view>

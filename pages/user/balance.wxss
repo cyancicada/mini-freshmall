@@ -22,7 +22,7 @@
   height: 80rpx;
   line-height: 80rpx;
   display: block;
-  font-size: 32rpx;
+  font-size: 30rpx;
   text-align: center;
   color: #fff;
 }
@@ -33,7 +33,7 @@
   height: 80rpx;
   line-height: 80rpx;
   display: block;
-  font-size: 32rpx;
+  font-size: 30rpx;
   font-weight: 700;
   text-align: center;
   color: #fff;
@@ -45,7 +45,7 @@
   left: 19rpx;
   top: 220rpx;
   margin: auto;
-  padding: 25rpx;
+  padding: 40rpx 25rpx;
   box-sizing:border-box;
   width: 95%;
   height:500rpx;
@@ -62,7 +62,7 @@
   line-height:80rpx;
   text-align: center;
   display: inline-block;
-  background:#ffdd00;
+  background:#00a92c;
   border-radius: 5rpx;
   color:#fff;
 

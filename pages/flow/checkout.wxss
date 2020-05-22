@@ -24,26 +24,11 @@
   margin-left:-20%;
   width:50%;
 }
-checkbox-group{
-  width:70%;
-  text-align: right;
-  margin-right:30rpx;
-}
-
-/*checkbox 选项框大小  */
-checkbox .wx-checkbox-input {
+.checked{width:50%}
+.checked view{
   width:35rpx;
   height:35rpx;
+  margin-right:10rpx;
   border-radius: 50%;
-
-  background: #fff;
-}
-/*checkbox选中后样式  */
-checkbox .wx-checkbox-input.wx-checkbox-input-checked {
-    background: #CE2F2F;
-    border:1px solid #fff
-}
-/*checkbox选中后图标样式  */
-checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
-    color: #ffffff;
+  float:right;
 }
