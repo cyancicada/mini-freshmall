@@ -5,7 +5,6 @@
         <text>充值金额</text>
         <view class="input_money">
           <text>￥</text>
-          <!-- <input name="monery" bindinput='input' placeholder-style="color:#fd0" placeholder="请输入充值金额" type="number" value="{{money}}" maxlength="9" ></input> -->
           <input type="number"  value="{{money}}" title="" bindinput="handleInput" bindblur="validate" maxlength="9" placeholder="请输入充值金额" placeholder-style="font-size:28rpx;color:#444"/>
 
         </view>

@@ -6,8 +6,26 @@
         <text class="balance-header-number">{{balance__number}}</text>
     </view>
     <view class="balance-menu">
-        <view class="balance_detailed" bindtap="onTargetMenus" data-url="pages/user/balance_detailed" data-type="detailed">余额明细</view>
-        <view class="recharge" bindtap="onTargetMenus" data-url="pages/user/recharget" data-type="recharget">充值</view>
+        <button  class="btn-normal" bindtap="onTargetMenus" data-url="pages/user/bill_list" data-type="list">
+          <view class="menus-item dis-flex b-f">
+            <view class="menus-item__left flex-box dis-flex flex-y-center">
+              <text class="menus-item__name f-30">账单</text>
+            </view>
+            <view class="menus-item__right flex-box dis-flex flex-x-end flex-y-center">
+              <text class="iconfont icon-xiangyoujiantou f-26 col-7"></text>
+            </view>
+          </view>
+        </button>
+        <button  class="btn-normal" bindtap="onTargetMenus" data-url="pages/user/recharget" data-type="recharget">
+          <view class="menus-item dis-flex b-f">
+            <view class="menus-item__left flex-box dis-flex flex-y-center">
+              <text class="menus-item__name f-30">充值</text>
+            </view>
+            <view class="menus-item__right flex-box dis-flex flex-x-end flex-y-center">
+              <text class="iconfont icon-xiangyoujiantou f-26 col-7"></text>
+            </view>
+          </view>
+        </button>
     </view>  
   </view>
 </view>

@@ -45,10 +45,9 @@
   left: 19rpx;
   top: 220rpx;
   margin: auto;
-  padding: 40rpx 25rpx;
+  padding: 10rpx 25rpx;
   box-sizing:border-box;
   width: 95%;
-  height:500rpx;
   box-shadow: 0 1rpx 5rpx 0px rgba(0, 0, 0, 0.05);
   font-size: 30rpx;
   border-top: 1rpx solid #eee;
@@ -56,16 +55,13 @@
   background: #fff;
 }
 
-.balance-menu>view{
-  width:40%;
-  height:80rpx;
-  line-height:80rpx;
-  text-align: center;
-  display: inline-block;
-  background:#00a92c;
-  border-radius: 5rpx;
-  color:#fff;
 
+.balance-menu>button>view {
+  position: relative;
+  padding: 28rpx;
+  border-bottom: 1rpx solid #eee;
 }
-.balance-menu>view:nth-child(2n){margin-left:20%}
-.balance-menu>view:nth-child(n+3){margin-top:25rpx;}
+
+.balance-menu>button:nth-last-child(1)>view{
+  border-bottom:none
+}

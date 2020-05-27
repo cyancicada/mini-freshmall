@@ -1,0 +1,52 @@
+page{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%
+}
+.container{
+  width:90%;
+  margin:auto;
+}
+.top{
+  width:100%;
+  text-align: center;
+}
+.logo{
+  width:60rpx;
+  height:60rpx;
+  border-radius: 50%;
+  vertical-align: middle
+}
+.applet_name{
+  margin-left:15rpx;
+  vertical-align: middle;
+}
+.flowing_water{
+  font-size: 45rpx;
+  display: block;
+  margin:10rpx;
+}
+.trade_status{
+  display: block;
+  margin-bottom:30rpx;
+  font-size: 28rpx;
+}
+
+.top>view{
+  margin-top:20rpx;
+}
+.left{
+  width:20%;
+  display: inline-block;
+  text-align: left;
+  font-size: 28rpx;
+}
+.right{
+  width:80%;
+  display: inline-block;
+  text-align: right;
+  font-size: 28rpx;
+}
+

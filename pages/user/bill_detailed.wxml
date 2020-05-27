@@ -1,0 +1,25 @@
+<view class="container">
+  <!-- 账单详情 -->
+  <view class="top">
+    <image mode="aspectFill" src="../images/logo.jpg" class="logo"></image>
+    <text class="applet_name">美菜美价</text>
+    <text class="flowing_water">{{flowing_water >=0 ? "+" + flowing_water : flowing_water}}</text>
+    <text class="trade_status">交易成功</text>
+    <view>
+      <text class="left">方式</text>
+      <text class="right">{{mark}}</text>
+    </view>
+    <view>
+      <text class="left">交易类型</text>
+      <text class="right">{{type_name}}</text>
+    </view>
+    <view>
+      <text class="left">订单号</text>
+      <text class="right">{{trade_no}}</text>
+    </view>
+    <view>
+      <text class="left">交易时间</text>
+      <text class="right">{{create_time}}</text>
+    </view>
+  </view>
+</view>

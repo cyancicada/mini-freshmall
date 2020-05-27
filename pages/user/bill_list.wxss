@@ -1,0 +1,73 @@
+page{position: fixed;top:0;left:0;width:100%;height:100%}
+.recharget{
+  padding:0 25rpx
+}
+.bill_detailed{
+  margin: 0rpx 0 20rpx 25rpx;
+  width: 30%;
+  height: 40rpx;
+  line-height: 40rpx;
+  display: block;
+  font-size: 30rpx;
+  text-align: left;
+  color: #000;
+}
+
+
+.bill_detailed_list{
+  width:100%;
+  overflow-y:scroll;
+}
+
+.bill_detailed_list .list{
+  width:100%;
+  padding:25rpx 25rpx 50rpx;
+  background: #fff;
+  box-sizing:border-box;
+  margin-top:10rpx;
+  position: relative;
+
+}
+
+.bill_detailed_list .list>view{
+  width:100%;
+  position: relative;
+}
+
+.bill_detailed_list view text{
+  display: inline-block;
+  font-size: 30rpx;
+  
+}
+
+.logo{
+  width:70rpx;
+  height:70rpx;
+  border-radius: 50%;
+  vertical-align: middle
+}
+.bill_type{
+  margin-left:15rpx;
+  vertical-align: middle
+}
+.create_time{
+  color:#ccc;
+  position: absolute;
+  top:85rpx;
+  left:110rpx;
+}
+.bill{
+  font-size:34rpx !important;
+  color:#ff495e;
+  font-weight: 700;
+  display: inline-block;
+  position: absolute;
+  right:0;
+  line-height: 70rpx;
+}
+
+
+/* 无交易记录 */
+.alance_detailed_list_no{width:100%;margin:20rpx auto;text-align: center;color:#ccc}
+.title-footer{margin:20rpx 18rpx 0 !important}
+

@@ -1,11 +1,10 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/user/bill_list",
+    "pages/user/bill_detailed",
     "pages/user/recharget",
-    
-    
     "pages/user/index",
-    "pages/user/balance_detailed",
     "pages/user/balance",
     "pages/category/index",
     "pages/category/list",
@@ -13,7 +12,6 @@
     "pages/search/index",
     "pages/flow/index",
     "pages/flow/checkout",
-    
     "pages/user/help",
     "pages/order/index",
     "pages/order/detail",
