@@ -72,7 +72,7 @@
       <button formType="submit" class="btn-normal">
         <view class="menus-item dis-flex b-f">
           <view class="menus-item__left flex-box dis-flex flex-y-center">
-            <text class="iconfont icon-map f-34 balance"></text>
+            <image mode="aspectFit" src="../images/balance.png" class="balance_img"></image>
             <text class="menus-item__name f-30">余额</text>
           </view>
           <view class="menus-item__right flex-box dis-flex flex-x-end flex-y-center">

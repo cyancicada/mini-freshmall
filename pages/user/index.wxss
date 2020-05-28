@@ -135,3 +135,4 @@
 
 
 .balance_number{margin-right:20rpx}
+.balance_img{width:34rpx;height:34rpx}

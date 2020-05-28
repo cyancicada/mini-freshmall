@@ -21,5 +21,9 @@
       <text class="left">交易时间</text>
       <text class="right">{{create_time}}</text>
     </view>
+    <view>
+      <text class="left">余额</text>
+      <text class="right">{{balance}}</text>
+    </view>
   </view>
 </view>

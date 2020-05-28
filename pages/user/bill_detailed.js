@@ -10,7 +10,8 @@ Page({
     create_time:"",
     mark:"",
     type_name:"",
-    trade_no:""
+    trade_no:"",
+    balance:""
   },
   /**
    * 生命周期函数--监听页面加载
@@ -24,6 +25,7 @@ Page({
       mark: options.mark,
       type_name: options.type_name,
       trade_no: options.trade_no,
+      balance: options.balance
     })
   },
 

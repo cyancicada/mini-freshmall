@@ -3,7 +3,7 @@
   <text class="bill_detailed">账单</text>
   <scroll-view class="bill_detailed_list" scroll-y="true" style="height:{{height}}px">
     <view class="list" wx:for="{{bill_detailed_list}}" bindtap="onTargetMenus" data-url="pages/user/bill_detailed"
-    data-flowing_water="{{item.balance}}" data-create_time="{{item.create_time}}"  data-mark="{{item.mark}}" data-trade_no="{{item.trade_no}}" data-type_name="{{item.type_name}}" >
+    data-flowing_water="{{item.balance}}" data-create_time="{{item.create_time}}" data-balance="{{item.latest_balance}}"  data-mark="{{item.mark}}" data-trade_no="{{item.trade_no}}" data-type_name="{{item.type_name}}" >
       <view>
         <image mode="aspectFill" src="../images/logo.jpg" class="logo"></image>
         <text class="bill_type">{{item.type_name}}</text>

@@ -51,7 +51,7 @@ Page({
     let _this = this;
     console.log(e.currentTarget.dataset.url)
     wx.navigateTo({
-      url: '/pages/user/bill_detailed?' + "flowing_water=" + e.currentTarget.dataset.flowing_water + "&create_time=" + e.currentTarget.dataset.create_time + "&mark=" + e.currentTarget.dataset.mark + "&trade_no=" + e.currentTarget.dataset.trade_no + "&type_name=" + e.currentTarget.dataset.type_name 
+      url: '/pages/user/bill_detailed?' + "flowing_water=" + e.currentTarget.dataset.flowing_water + "&create_time=" + e.currentTarget.dataset.create_time + "&mark=" + e.currentTarget.dataset.mark + "&trade_no=" + e.currentTarget.dataset.trade_no + "&type_name=" + e.currentTarget.dataset.type_name + "&balance=" + e.currentTarget.dataset.balance 
     })
   },
 

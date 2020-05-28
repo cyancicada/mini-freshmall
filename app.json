@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/user/index",
     "pages/user/bill_list",
     "pages/user/bill_detailed",
     "pages/user/recharget",
-    "pages/user/index",
     "pages/user/balance",
     "pages/category/index",
     "pages/category/list",
