@@ -188,7 +188,7 @@ Page({
           }
           //按钮禁用, 防止二次提交
           _this.data.disabled = true;
-          callback(result);
+          
         }, function (result) {
           // fail
           console.log('fail');
