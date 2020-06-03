@@ -208,7 +208,9 @@ Page({
         }, function (result) {
           // success
           console.log('success');
-          callback(result);
+          wx.redirectTo({
+            url: '../order/detail?order_id=' + result.data.order_id,
+          });
         }, function (result) {
           // fail
           console.log('fail');
