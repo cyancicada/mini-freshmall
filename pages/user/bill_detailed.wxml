@@ -6,8 +6,8 @@
     <text class="flowing_water">{{flowing_water >=0 ? "+" + flowing_water : flowing_water}}</text>
     <text class="trade_status">交易成功</text>
     <view>
-      <text class="left">方式</text>
-      <text class="right">{{mark}}</text>
+      <text class="left">备注</text>
+      <text class="right">美菜美价祝您生活愉快，感谢您的支持与信任</text>
     </view>
     <view>
       <text class="left">交易类型</text>

@@ -7,13 +7,13 @@ Page({
    */
   data: {
     disabled: false,
-    state1:"color:#fd0;background: #fff;",
-    state2: "color:#fd0;background: #fff;",
-    state3: "color:#fd0;background: #fff;",
-    state4: "color:#fd0;background: #fff;",
-    state5: "color:#fd0;background: #fff;",
-    state6: "color:#fd0;background: #fff;",
-    recharge_next_button: "background:#fd0;opacity:1;",
+    state1:"color:#00a92c;background: #fff;",
+    state2: "color:#00a92c;background: #fff;",
+    state3: "color:#00a92c;background: #fff;",
+    state4: "color:#00a92c;background: #fff;",
+    state5: "color:#00a92c;background: #fff;",
+    state6: "color:#00a92c;background: #fff;",
+    recharge_next_button: "background:#00a92c;opacity:1;",
     money: "",
     error: '',
     balance: 100,
@@ -41,12 +41,12 @@ Page({
   btn10: function () {
     let _this = this
     _this.setData({
-      state1: "background:#fd0;color:#fff;",
-      state2: "color:#fd0;background: #fff;",
-      state3: "color:#fd0;background: #fff;",
-      state4: "color:#fd0;background: #fff;",
-      state5: "color:#fd0;background: #fff;",
-      state6: "color:#fd0;background: #fff;",
+      state1: "background:#00a92c;color:#fff;",
+      state2: "color:#00a92c;background: #fff;",
+      state3: "color:#00a92c;background: #fff;",
+      state4: "color:#00a92c;background: #fff;",
+      state5: "color:#00a92c;background: #fff;",
+      state6: "color:#00a92c;background: #fff;",
       money: "10",
     });
     console.log(_this.data.money)
@@ -54,12 +54,12 @@ Page({
   btn20: function () {
     let _this = this
     _this.setData({
-      state1: "color:#fd0;background: #fff;",
-      state2: "background:#fd0;color:#fff;",
-      state3: "color:#fd0;background: #fff;",
-      state4: "color:#fd0;background: #fff;",
-      state5: "color:#fd0;background: #fff;",
-      state6: "color:#fd0;background: #fff;",
+      state1: "color:#00a92c;background: #fff;",
+      state2: "background:#00a92c;color:#fff;",
+      state3: "color:#00a92c;background: #fff;",
+      state4: "color:#00a92c;background: #fff;",
+      state5: "color:#00a92c;background: #fff;",
+      state6: "color:#00a92c;background: #fff;",
       money: "20",
     });
     console.log(_this.data.money)
@@ -67,12 +67,12 @@ Page({
   btn30: function () {
     let _this = this
     _this.setData({
-      state1: "color:#fd0;background: #fff;",
-      state2: "color:#fd0;background: #fff;",
-      state3: "background:#fd0;color:#fff;",
-      state4: "color:#fd0;background: #fff;",
-      state5: "color:#fd0;background: #fff;",
-      state6: "color:#fd0;background: #fff;",
+      state1: "color:#00a92c;background: #fff;",
+      state2: "color:#00a92c;background: #fff;",
+      state3: "background:#00a92c;color:#fff;",
+      state4: "color:#00a92c;background: #fff;",
+      state5: "color:#00a92c;background: #fff;",
+      state6: "color:#00a92c;background: #fff;",
       money: "30",
     });
     console.log(_this.data.money)
@@ -80,12 +80,12 @@ Page({
   btn50: function () {
     let _this = this
     _this.setData({
-      state1: "color:#fd0;background: #fff;",
-      state2: "color:#fd0;background: #fff;",
-      state3: "color:#fd0;background: #fff;",
-      state4: "background:#fd0;color:#fff;",
-      state5: "color:#fd0;background: #fff;",
-      state6: "color:#fd0;background: #fff;",
+      state1: "color:#00a92c;background: #fff;",
+      state2: "color:#00a92c;background: #fff;",
+      state3: "color:#00a92c;background: #fff;",
+      state4: "background:#00a92c;color:#fff;",
+      state5: "color:#00a92c;background: #fff;",
+      state6: "color:#00a92c;background: #fff;",
       money: "50",
     });
     console.log(_this.data.money)
@@ -93,12 +93,12 @@ Page({
   btn100: function () {
     let _this = this
     _this.setData({
-      state1: "color:#fd0;background: #fff;",
-      state2: "color:#fd0;background: #fff;",
-      state3: "color:#fd0;background: #fff;",
-      state4: "color:#fd0;background: #fff;",
-      state5: "background:#fd0;color:#fff;",
-      state6: "color:#fd0;background: #fff;",
+      state1: "color:#00a92c;background: #fff;",
+      state2: "color:#00a92c;background: #fff;",
+      state3: "color:#00a92c;background: #fff;",
+      state4: "color:#00a92c;background: #fff;",
+      state5: "background:#00a92c;color:#fff;",
+      state6: "color:#00a92c;background: #fff;",
       money: "100",
     });
     console.log(_this.data.money)
@@ -106,12 +106,12 @@ Page({
   btn200: function () {
     let _this = this
     _this.setData({
-      state1: "color:#fd0;background: #fff;",
-      state2: "color:#fd0;background: #fff;",
-      state3: "color:#fd0;background: #fff;",
-      state4: "color:#fd0;background: #fff;",
-      state5: "color:#fd0;background: #fff;",
-      state6: "background:#fd0;color:#fff",
+      state1: "color:#00a92c;background: #fff;",
+      state2: "color:#00a92c;background: #fff;",
+      state3: "color:#00a92c;background: #fff;",
+      state4: "color:#00a92c;background: #fff;",
+      state5: "color:#00a92c;background: #fff;",
+      state6: "background:#00a92c;color:#fff",
       money: "200",
     });
     console.log(_this.data.money)
@@ -120,12 +120,12 @@ Page({
     let _this = this
     console.log(event.detail.value);
     _this.setData({
-      state1: "color:#fd0;background: #fff;",
-      state2: "color:#fd0;background: #fff;",
-      state3: "color:#fd0;background: #fff;",
-      state4: "color:#fd0;background: #fff;",
-      state5: "color:#fd0;background: #fff;",
-      state6: "color:#fd0;background: #fff;",
+      state1: "color:#00a92c;background: #fff;",
+      state2: "color:#00a92c;background: #fff;",
+      state3: "color:#00a92c;background: #fff;",
+      state4: "color:#00a92c;background: #fff;",
+      state5: "color:#00a92c;background: #fff;",
+      state6: "color:#00a92c;background: #fff;",
       money: event.detail.value
     });
   },

@@ -25,10 +25,10 @@
     "pages/login/self"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "",
-    "navigationBarTextStyle": "black",
-    "backgroundTextStyle": "dark"
+    "navigationBarTextStyle": "white",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#00a92c"
   },
   "tabBar": {
     "color": "#6e6d6b",

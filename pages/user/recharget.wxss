@@ -41,8 +41,8 @@ input{
   height:80rpx;
   line-height:80rpx;
   margin-top:20rpx;
-  border:2rpx solid #fd0;
-  color:#fd0;
+  border:2rpx solid #00a92c;
+  color:#00a92c;
   background: #fff;
   display: inline-block;
   text-align: center;
@@ -68,4 +68,4 @@ input{
   border-radius: 10rpx
 }
 
-.recharge_next button{background:#fd0;opacity:1;}
+.recharge_next button{background:#00a92c;opacity:1;}
