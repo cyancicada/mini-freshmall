@@ -16,7 +16,7 @@
             </view>
           </view>
         </button>
-        <button  class="btn-normal" bindtap="onTargetMenus" data-url="pages/user/recharget" data-type="recharget">
+        <!-- <button  class="btn-normal" bindtap="onTargetMenus" data-url="pages/user/recharget" data-type="recharget">
           <view class="menus-item dis-flex b-f">
             <view class="menus-item__left flex-box dis-flex flex-y-center">
               <text class="menus-item__name f-30">充值</text>
@@ -25,7 +25,7 @@
               <text class="iconfont icon-xiangyoujiantou f-26 col-7"></text>
             </view>
           </view>
-        </button>
+        </button> -->
     </view>  
   </view>
 </view>
